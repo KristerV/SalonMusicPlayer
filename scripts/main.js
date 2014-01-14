@@ -27,7 +27,7 @@ $(document).ready(function(){
         if (!intro_played) {
             window.timer = setTimeout(function(){
                 htmlPopupStart();
-            },timer_duration_seconds*1000);
+            },start_popop_delay*1000);
         }
     });
 

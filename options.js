@@ -19,20 +19,20 @@ function getOptions() {
     //////////////
 
     // App language
-    window.Language = 'et';
+    window.Language = 'en';
 
     // root is the php folder
     window.path_to_music = "../../music";
 
     // Nuppude, tekstide suurus
     // võimalikud väärutsed: null, 'doublesize', 'quadruplesize'
-    window.layout_size = 'null';
+    window.layout_size = null;
 
     // http://hexcolorgenerator.com/
     window.app_color = '#1a1a2c';
 
     // The introduction popup will appear after this amount of milliseconds
-    window.timer_duration_seconds = 6;
+    window.start_popop_delay = 6;
 
     // How long does one session last in minutes
     window.session_duration_minutes = 45;
