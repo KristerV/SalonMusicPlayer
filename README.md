@@ -12,6 +12,11 @@ Features:
 * Music files are picked up from folders automatically.
 * You can cuztomize player color nad timer options very easily.
 
+Screenshot
+----------
+
+![Alt text](screenshots.png "Screenshots")
+
 Note
 ----
 If you do use this, I would be very interested in hearing where and how.
