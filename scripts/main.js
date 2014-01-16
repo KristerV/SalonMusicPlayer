@@ -30,7 +30,4 @@ $(document).ready(function(){
             },start_popop_delay*1000);
         }
     });
-
-
-    getFileList();
 });

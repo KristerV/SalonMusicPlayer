@@ -2,7 +2,10 @@ window.last_played = '';
 
 function useOptions() {
     $('body').css('background-color', app_color);
-    $.getScript('languages/'+ Language +'.js');
+    $.getScript('languages/'+ Language +'.js', function(){
+        getFileList();
+    });
+    // head.js('languages/'+ Language +'.js');
 }
 
 function getFileList() {
