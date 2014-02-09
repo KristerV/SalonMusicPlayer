@@ -46,8 +46,8 @@ function getOptions() {
     // After outro has played, how long until app resets?
     window.session_reset_delay_minutes = 1;
 
-    // Volume slider
-    window.volume_slider_visible = true;
+    // What is the default volume
+    window.volume_slider_default_percent = 25;
 
 
 }

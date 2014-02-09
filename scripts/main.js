@@ -8,8 +8,7 @@ $(document).ready(function(){
 
     getOptions();
     useOptions();
-    if (volume_slider_visible)
-        htmlVolumeSlider();
+    htmlVolumeSlider();
 
     $('#music-list').on(touchClick, ".list-item", function(event){
         if (!session_started) {

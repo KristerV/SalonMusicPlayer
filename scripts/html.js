@@ -51,4 +51,5 @@ function htmlVolumeSlider() {
             var value = $("#volume-slider").val() / 100;
             $(".playing").prop('volume', value);
     });
+    $("#volume-slider").val(volume_slider_default_percent);
 }
