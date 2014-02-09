@@ -56,20 +56,22 @@ function play(selection, track) {
         'src': full_path,
         'autoplay':'autoplay',
     }).appendTo("body")
-            .addClass("playing")
-            // Play next after finished
-            .bind('ended', function(){
-                if (selection == "1_Intro") {
-                    $('#popup-space').empty();
-                    play(saved_selection, last_played);
-                } else if (selection == "2_Outro") {
-                    var timer_reset = setTimeout(function(){
-                        location.reload();
-                    }, session_reset_delay_minutes*60000);
-                } else {
-                    play(selection);
-                }
-            });
+        .addClass("playing")
+        // Play next after finished
+        .bind('ended', function(){
+            if (selection == "1_Intro") {
+                $('#popup-space').empty();
+                play(saved_selection, last_played);
+            } else if (selection == "2_Outro") {
+                var timer_reset = setTimeout(function(){
+                    location.reload();
+                }, session_reset_delay_minutes*60000);
+            } else {
+                play(selection);
+            }
+        });
+    var volume = $("#volume-slider").val() / 100;
+    $(".playing").prop('volume', volume);
 }
 
 function choose_file_to_play(selection) {
