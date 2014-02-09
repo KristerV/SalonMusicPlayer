@@ -16,11 +16,11 @@ body {
 
 #music-list {
     overflow: auto;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 90%;
 }
 
 .list-item {
@@ -52,10 +52,6 @@ body {
 .pop-up {
 
 }
-/*
-h2, p {
-    font-size: 2em;
-}*/
 
 #popup-space {
     height: 100%;
@@ -97,6 +93,22 @@ h2, p {
     display:inline-block;
 }
 
+#volume-space {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 10%;
+    width: 100%;
+}
+
+#volume-slider {
+    width: 70%;
+    height: 100%;
+}
+
+#volume-icon {
+    height: 100%;
+}
 
 /* DOUBLE SIZE */
 h2.doublesize, p.doublesize {

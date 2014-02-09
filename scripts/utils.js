@@ -9,7 +9,7 @@ function useOptions() {
 }
 
 function getFileList() {
-    $.post('php/getList.php', {path_to_music: path_to_music}, function(data, status) {
+    $.post('php/getMusicList.php', {path_to_music: path_to_music}, function(data, status) {
         try {
             result = JSON.parse(data);
         } catch(err) {
@@ -35,7 +35,6 @@ function fillMusicList(result) {
 }
 
 function play(selection, track) {
-    console.log("play");
 
     // Stop any playing audio
     $('.playing').each(function(){
@@ -106,7 +105,6 @@ function fix_path(path) {
 
 function stop_session() {
     if (!stopping_initiated) {
-        console.log("here1");
         window.stopping_initiated = true;
         $('.playing').animate({volume: 0}, session_gradual_end_seconds*1000);
         var pause_timer = setTimeout(function(){
@@ -117,13 +115,6 @@ function stop_session() {
         var outro = setTimeout(function(){
             play("2_Outro");
         }, (session_outro_delay_minutes*60000)+(session_gradual_end_seconds*1000));
-    }
-}
-
-function check_time() {
-    var current_minutes = new Date().getMinutes();
-    if (session_end_time_minutes_from < current_minutes && session_end_time_minutes_to > current_minutes) {
-        stop_session();
     }
 }
 

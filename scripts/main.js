@@ -8,13 +8,12 @@ $(document).ready(function(){
 
     getOptions();
     useOptions();
+    if (volume_slider_visible)
+        htmlVolumeSlider();
 
     $('#music-list').on(touchClick, ".list-item", function(event){
         if (!session_started) {
             window.session_timer_stop = setTimeout(function(){stop_session()}, session_duration_minutes*60000);
-            if (typeof session_end_time_minutes_from == 'number') {
-                window.session_check_time = setInterval(function(){check_time()}, 30000);
-            }
             window.session_started = true;
         }
         $('.list-item.active').removeClass("active");

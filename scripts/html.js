@@ -43,3 +43,12 @@ function htmlPopupIntroPlaying() {
     $('#popup-solid-back').css('background-color', app_color);
     $('#popup-solid-back').css('bottom', $(window).height()/2-$('#popup-solid-back').height()/2);
 }
+
+function htmlVolumeSlider() {
+    var html = '<img src="img/iconmonstr-audio-4-icon.svg" id="volume-icon" /><input id="volume-slider" type="range" min="0" max="100">';
+    $('#volume-space').append(html);
+    $("#volume-slider").change(function(){
+            var value = $("#volume-slider").val() / 100;
+            $(".playing").prop('volume', value);
+    });
+}
