@@ -13,7 +13,6 @@ $(document).ready(function(){
         htmlVolumeSlider();
     }
 
-
     $('#music-list').on(touchClick, ".list-item", function(event){
         if (!session_started) {
             window.session_timer_stop = setTimeout(function(){stop_session()}, session_duration*60000);

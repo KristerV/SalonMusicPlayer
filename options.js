@@ -35,7 +35,7 @@ function getOptions() {
     window.app_color = '#1a1a2c';
 
     // How long does one session last in minutes
-    window.session_duration_minutes = [1, 20, 40];
+    window.session_duration_minutes = [20, 40];
 
     // Before session ends, for how long does the music gradually turn down volume
     window.session_gradual_end_seconds = 20;

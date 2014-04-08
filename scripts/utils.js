@@ -38,6 +38,16 @@ function fillMusicList(result) {
 
 function play(selection, last_played) {
 
+    if (['1_Intro', '2_Outro'].indexOf(selection) > -1 && (typeof playlist[selection] == 'undefined')) {
+        if (selection == '2_Outro') {
+            console.log("here1");
+            var timer_reset = setTimeout(function(){
+                location.reload();
+            }, session_reset_delay_minutes*60000);
+        }
+        return false;
+    }
+
     // Stop any playing audio
     $('.playing').each(function(){
         this.pause();
@@ -62,16 +72,13 @@ function play(selection, last_played) {
         // Play next after finished
         .bind('ended', function(){
             if (selection == "1_Intro") {
-                console.log("intro timer");
                 $('#popup-space').empty();
                 play(saved_selection, last_played);
             } else if (selection == "2_Outro") {
-                console.log("outro timer");
                 var timer_reset = setTimeout(function(){
                     location.reload();
                 }, session_reset_delay_minutes*60000);
             } else {
-                console.log("else timer");
                 play(selection);
             }
         });
