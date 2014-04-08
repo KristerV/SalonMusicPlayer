@@ -6,6 +6,7 @@ function getString(string) {
         'cancel': 'CANCEL',
         'ok': 'OK',
         'introplaying' : 'Introduction playing',
+        'chooseduration' : 'Choose session duration'
     };
     return library[string];
 }

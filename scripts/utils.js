@@ -4,6 +4,7 @@ function useOptions() {
     $('body').css('background-color', app_color);
     $.getScript('languages/'+ Language +'.js', function(){
         getFileList();
+        htmlPopupStart();
     });
     // head.js('languages/'+ Language +'.js');
 }
@@ -16,6 +17,7 @@ function getFileList() {
             console.log("Failed to get files: " + err + "\n" + data);
             exit();
         }
+        console.log(result);
         fillMusicList(result);
     });
 }
@@ -34,7 +36,7 @@ function fillMusicList(result) {
     }
 }
 
-function play(selection, track) {
+function play(selection, last_played) {
 
     // Stop any playing audio
     $('.playing').each(function(){
@@ -48,7 +50,7 @@ function play(selection, track) {
 
     // Combine audio file path
     var folder = selection;
-    var file = (typeof track == 'undefined') ? choose_file_to_play(selection) : track;
+    var file = (typeof last_played == 'undefined') ? choose_file_to_play(selection) : last_played;
     var full_path = fix_path(path_to_music) + fix_path(folder) + file;
 
     // Create audio element
@@ -60,18 +62,23 @@ function play(selection, track) {
         // Play next after finished
         .bind('ended', function(){
             if (selection == "1_Intro") {
+                console.log("intro timer");
                 $('#popup-space').empty();
                 play(saved_selection, last_played);
             } else if (selection == "2_Outro") {
+                console.log("outro timer");
                 var timer_reset = setTimeout(function(){
                     location.reload();
                 }, session_reset_delay_minutes*60000);
             } else {
+                console.log("else timer");
                 play(selection);
             }
         });
-    var volume = $("#volume-slider").val() / 100;
-    $(".playing").prop('volume', volume);
+    if (volume_slider) {
+        var volume = $("#volume-slider").val() / 100;
+        $(".playing").prop('volume', volume);
+    }
 }
 
 function choose_file_to_play(selection) {

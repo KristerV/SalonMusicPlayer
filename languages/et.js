@@ -6,6 +6,7 @@ function getString(string) {
         'cancel': 'EI',
         'ok': 'JAH',
         'introplaying' : 'Sissejuhatus mängib',
+        'chooseduration' : 'Vali sessiooni pikkus'
     };
     return library[string];
 }

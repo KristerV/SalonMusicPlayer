@@ -14,6 +14,9 @@ function getOptions() {
     // correct: 0.4
     // false: 0,4
 
+    // Volume does not work on many tablets. Apple devices have banned
+    // the function, Android devices don't work because of some bug.
+
     //////////////
     // OPTIONS: //
     //////////////
@@ -25,14 +28,14 @@ function getOptions() {
     window.path_to_music = "../../music";
 
     // Nuppude, tekstide suurus
-    // võimalikud väärutsed: null, 'doublesize', 'quadruplesize'
+    // Options: null, 'doublesize', 'quadruplesize'
     window.layout_size = null;
 
     // http://hexcolorgenerator.com/
     window.app_color = '#1a1a2c';
 
     // How long does one session last in minutes
-    window.session_duration_minutes = 45;
+    window.session_duration_minutes = [1, 20, 40];
 
     // Before session ends, for how long does the music gradually turn down volume
     window.session_gradual_end_seconds = 20;
@@ -46,8 +49,11 @@ function getOptions() {
     // After outro has played, how long until app resets?
     window.session_reset_delay_minutes = 1;
 
+    // Is volume slider visible? (true/false)
+    window.volume_slider = false;
+
     // What is the default volume
-    window.volume_slider_default_percent = 25;
+    window.volume_slider_default_percent = 90;
 
 
 }

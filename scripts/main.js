@@ -8,11 +8,15 @@ $(document).ready(function(){
 
     getOptions();
     useOptions();
-    htmlVolumeSlider();
+    if (volume_slider) {
+        $('#music-list').css('height', '90%');
+        htmlVolumeSlider();
+    }
+
 
     $('#music-list').on(touchClick, ".list-item", function(event){
         if (!session_started) {
-            window.session_timer_stop = setTimeout(function(){stop_session()}, session_duration_minutes*60000);
+            window.session_timer_stop = setTimeout(function(){stop_session()}, session_duration*60000);
             window.session_started = true;
         }
         $('.list-item.active').removeClass("active");
@@ -24,7 +28,7 @@ $(document).ready(function(){
         }
         if (!intro_played) {
             window.timer = setTimeout(function(){
-                htmlPopupStart();
+                htmlPopupConfirmMusic();
             },start_popop_delay*1000);
         }
     });
