@@ -1,12 +1,12 @@
 function getString(string) {
     var library = {
         'silent': 'Vaikus',
-        'continuewithmusic': 'Kas soovid selle muusikaga jätkata?',
-        'resumeafterintro': 'Muusika jätkub pärast sissejuhatust.',
+        'continuewithmusic': 'Kas soovid selle seansi taustamuusikaga jätkata?',
+        'resumeafterintro': 'Seansi taustamuusika jätkub pärast sissejuhatust.',
         'cancel': 'EI',
         'ok': 'JAH',
-        'introplaying' : 'Sissejuhatus mängib',
-        'chooseduration' : 'Vali sessiooni pikkus'
+        'introplaying' : 'Seanss käib, taustamuusika jätkub peale seansi sissejuhatust',
+        'chooseduration' : 'Vali seansi pikkus ja sulle sobiv taustamuusika'
     };
     return library[string];
 }
