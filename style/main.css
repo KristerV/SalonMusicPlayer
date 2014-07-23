@@ -26,7 +26,6 @@ body {
 .list-item {
     width: 100%;
 
-    font-size: 2em;
     padding: 1em 0;
     margin: 0 0;
     color: rgba(255, 255, 255, 0.8);
@@ -40,7 +39,6 @@ body {
 }
 
 .list-item.active {
-    font-size: 1.9em;
     margin: 0.1em 0;
     background-color: rgba(255, 255, 255, 0.1);
 }
@@ -83,7 +81,6 @@ body {
 
 .confirm-button {
     width: 6em;
-    font-size: 2em;
     padding: 0.5em 0em;
     margin: 0em 1em;
     margin-bottom: 0.5em;
@@ -112,15 +109,12 @@ body {
 
 /* DOUBLE SIZE */
 h2.doublesize, p.doublesize {
-    font-size: 4em;
 }
 .list-item.doublesize {
-    font-size: 4em;
     padding: 2em 0;
     border: 0.1em solid rgba(255, 255, 255, 0.03);
 }
 .list-item.active.doublesize {
-    font-size: 3.8em;
     margin: 0.2em 0;
 }
 #popup-solid-back.doublesize {
@@ -129,7 +123,6 @@ h2.doublesize, p.doublesize {
 }
 .confirm-button.doublesize {
     width: 12em;
-    font-size: 4em;
     padding: 1em 0em;
     margin: 0em 2em;
     margin-bottom: 1em;
@@ -138,15 +131,12 @@ h2.doublesize, p.doublesize {
 
 /* QUADRUPLE SIZE */
 h2.quadruplesize, p.quadruplesize {
-    font-size: 8em;
 }
 .list-item.quadruplesize {
-    font-size: 8em;
     padding: 4em 0;
     border: 0.2em solid rgba(255, 255, 255, 0.03);
 }
 .list-item.active.quadruplesize {
-    font-size: 7.6em;
     margin: 0.4em 0;
 }
 #popup-solid-back.quadruplesize {
@@ -155,7 +145,6 @@ h2.quadruplesize, p.quadruplesize {
 }
 .confirm-button.quadruplesize {
     width: 24em;
-    font-size: 8em;
     padding: 2em 0em;
     margin: 0em 4em;
     margin-bottom: 2em;
